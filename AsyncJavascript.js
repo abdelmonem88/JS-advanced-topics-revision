@@ -40,9 +40,11 @@ const changeColor = (ele, color) => {
 /* async/await example */
 
 const changeHeadingsColors = async () => {
+  resetBtn.disabled = true;
   await changeColor(headingOne, "red");
   await changeColor(headingTwo, "green");
   await changeColor(headingThree, "blue");
+  resetBtn.disabled = false;
 };
 
 const resetColor = () => {
